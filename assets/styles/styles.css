@@ -1,0 +1,137 @@
+/* ===== RESET GENERAL ===== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background-color: #0a0a23;
+    color: #e0e0e0;
+    line-height: 1.6;
+}
+
+/* ===== CONTENEDOR PRINCIPAL ===== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* ===== TÍTULOS Y TEXTOS ===== */
+h1,
+h2,
+h3 {
+    color: #ffffff;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+p {
+    margin-bottom: 1em;
+    color: #cccccc;
+}
+
+/* ===== TARJETAS DE GALAXIAS ===== */
+.galaxy-card {
+    width: 100%;
+    min-width: 480px;
+    background-color: #1a1a40;
+    border: 1px solid #2e2e5e;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+    transition: transform 0.2s ease;
+}
+
+
+.galaxy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.galaxy-card h3 {
+    margin-bottom: 0.5rem;
+    color: #76c7ff;
+}
+
+.galaxy-card p span {
+    font-weight: bold;
+    color: #fff;
+}
+
+/* ===== GRID DE GALAXIAS ===== */
+.galaxy-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  justify-content: center;
+  max-width: calc(3 * 320px + 4rem); /* ancho para 3 cards + gaps */
+  margin: 0 auto;
+}
+
+
+/* ===== IMÁGENES DE GALAXIAS ===== */
+.galaxy-img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+
+.text-center {
+    text-align: center;
+}
+
+
+/*VENTANA MODAL*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #1a1a40;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 800px;
+  width: 90%;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/styles/styles.css">
-    <script type="module"  src="assets/js/main.js"></script>
-    <title>API NASA</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API NASA</title>
+  <link rel="stylesheet" href="assets/styles/styles.css" />
+  <script type="module" src="assets/js/main.js"></script>
 </head>
 <body>
-    <header></header>
-    <nav></nav>
-    <main>
-        <h1>APOD del día</h1>
-        <div id="apod">
-            <img id="apodImage">
-            <input type="date" id="apodDatePicker" />
-        </div>
+  <header></header>
+  <nav></nav>
+  <main class="container">
+    <h1 class="text-center">APOD del día</h1>
+
+    <div id="apodOfTheDay" class="galaxy-card text-center">
+      <h2 id="apodTitle"></h2>
+      <img id="apodImage" class="galaxy-img" alt="Imagen del día" />
+      <p id="apodExplanation"></p>
+      <input type="date" id="apodDatePicker" />
+    </div>
 
 
-        <h2>Últimos 5 días</h2>
-        <div id="apodGallery">
+    <!-- GALERIA 5 DIAS -->
+    <h2 class="text-center">Últimos 5 días</h2>
+    <div id="apodGallery" class="galaxy-grid"></div>
+  </main>
+  <footer></footer>
 
-        </div>
-    </main>
-    <footer></footer>
+  <!-- VENTANA MODAL OCULTA -->
+  <div id="apodModal" class="modal hidden">
+  <div class="modal-content">
+    <span id="modalClose" class="modal-close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <img id="modalImage" />
+    <p id="modalExplanation"></p>
+    <a id="modalDownload" download target="_blank">Descargar HD</a>
+  </div>
+</div>
 </body>
 </html>
